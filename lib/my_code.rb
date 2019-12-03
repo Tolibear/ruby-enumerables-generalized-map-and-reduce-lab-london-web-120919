@@ -1,22 +1,9 @@
-#
-# def map(source_array)
-#   yield
-#   source_array
-# end
-#
-# def map(source_array) {}
-#   yield
-#   source_array
-# end
-
-
-def map(source_array) { }
+def map(source_array) 
   new_array = []
-  # i = 0
-  # while i < source_array.length do
-  #   new_array << ( source_array[i] * -1 )
-  #   i += 1
-  # end
-  yield
+  i = 0
+  while i < source_array.length do
+    new_array.push(yield(array[i]))
+    i += 1
+  end
   new_array
 end
